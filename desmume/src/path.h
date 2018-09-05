@@ -134,7 +134,9 @@ public:
 
 	void LoadModulePath()
 	{
-#if defined(HOST_WINDOWS)
+#ifdef ANDROID
+	return; // set other places
+#elif defined(HOST_WINDOWS)
 
 		char *p;
 		ZeroMemory(pathToModule, sizeof(pathToModule));
@@ -174,6 +176,8 @@ public:
 #ifdef HOST_WINDOWS
 		std::string temp = (std::string)"." + DIRECTORY_DELIMITER_CHAR + pathToDefault;
 		strncpy(pathToDefault, temp.c_str(), maxCount);
+#elif ANDROID
+		snprintf(pathToDefault, maxCount, "%s/%s", pathToModule, key); 
 #else
 		strncpy(pathToDefault, pathToModule, maxCount);
 #endif
