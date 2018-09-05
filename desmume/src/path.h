@@ -114,7 +114,7 @@ public:
 	char pathToCheats[MAX_PATH];
 	char pathToSounds[MAX_PATH];
 	char pathToFirmware[MAX_PATH];
-	char pathToModule[MAX_PATH];
+	static char pathToModule[MAX_PATH]; // static added for backward compatibility
 	char pathToLua[MAX_PATH];
 	char pathToSlot1D[MAX_PATH];
 
