@@ -77,7 +77,7 @@ public:
 	#define STATEKEY		"States"
 	#define SCREENSHOTKEY	"Screenshots"
 	#define AVIKEY			"AviFiles"
-	#define CHEATKEY		"Cheats"
+	#define CHEATKEY		"Battery"	// backwards compatibility
 	#define R4FORMATKEY		"R4format"
 	#define SOUNDKEY		"SoundSamples"
 	#define FIRMWAREKEY		"Firmware"
